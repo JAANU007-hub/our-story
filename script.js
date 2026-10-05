@@ -78,6 +78,7 @@ const bgMusic = document.getElementById("bgMusic");
 bgMusic.volume = 0.25;
 
 enterStory.addEventListener("click", () => {
+    document.documentElement.requestFullscreen().catch(() => {});
     showScreen("mapScreen");
     bgMusic.play().catch(() => {});
 });
