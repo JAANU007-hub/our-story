@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+          maximum-scale=1.0, user-scalable=no">
+
+    <title>A + J — Our Story</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Pacifico&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="orientationWarning">
+    <div class="rotate-icon">↻</div>
+    <h2>Turn your phone sideways</h2>
+    <p>Our little world looks better in landscape ♡</p>
+</div>
+
+<!-- BMW BIRTHDAY INTRO -->
+<section id="bmwIntroScreen" class="screen bmw-intro-screen active">
+
+    <video id="bmwIntroVideo"
+           class="bmw-intro-video"
+           autoplay
+           muted
+           playsinline
+           preload="auto">
+
+        <source src="assets/bmw-intro.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="bmw-intro-overlay"></div>
+
+    <button id="skipBMW" class="bmw-skip-button">
+        SKIP →
+    </button>
+
+</section>
+
+
+<main id="experience">
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section id="introScreen" class="screen active intro-screen">
+
+        <div class="intro-glow"></div>
+        <div class="intro-stars"></div>
+
+        <div class="intro-content">
+
+            <p class="eyebrow">A LITTLE STORY ABOUT</p>
+
+            <h1>
+                YOU
+                <span>&</span>
+                ME
+            </h1>
+
+            <p class="intro-date">06 • 10 • 2026</p>
+
+            <button id="enterStory" class="main-button">
+                ENTER OUR STORY
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAP
+    ====================================================== -->
+
+    <section id="mapScreen" class="screen map-screen">
+
+        <div class="map-heading">
+            <p class="eyebrow">A LITTLE WORLD OF</p>
+            <h2>OUR STORY</h2>
+            <p>Some memories deserve their own little world.</p>
+        </div>
+
+        <div class="heart-map">
+
+            <svg class="heart-svg"
+                 viewBox="0 0 1000 650"
+                 preserveAspectRatio="none">
+
+                <path
+                    class="heart-path"
+                    d="
+                    M500 560
+                    C450 510 145 360 145 175
+                    C145 55 290 35 370 115
+                    C430 175 500 245 500 245
+                    C500 245 570 175 630 115
+                    C710 35 855 55 855 175
+                    C855 360 550 510 500 560
+                    "
+                />
+
+                <path
+                    class="heart-glow-path"
+                    d="
+                    M500 560
+                    C450 510 145 360 145 175
+                    C145 55 290 35 370 115
+                    C430 175 500 245 500 245
+                    C500 245 570 175 630 115
+                    C710 35 855 55 855 175
+                    C855 360 550 510 500 560
+                    "
+                />
+
+            </svg>
+
+
+            <!-- LEVEL 01 -->
+
+            <button class="level-node level-1"
+                    data-chapter="chapter01">
+
+                <span class="level-number">01</span>
+                <span class="level-title">THE BEGINNING</span>
+
+            </button>
+
+
+            <!-- LEVEL 02 -->
+
+            <button class="level-node level-2"
+                    data-chapter="chapter02">
+
+                <span class="level-number">02</span>
+                <span class="level-title">THE HITMAN</span>
+
+            </button>
+
+
+            <!-- LEVEL 03 -->
+
+            <button class="level-node level-3"
+                    data-chapter="chapter03">
+
+                <span class="level-number">03</span>
+                <span class="level-title">ANIME</span>
+
+            </button>
+
+
+            <!-- CENTER -->
+
+            <div class="heart-center">
+                <span>A + J</span>
+            </div>
+
+
+            <!-- LEVEL 04 -->
+
+            <button class="level-node level-4"
+                    data-chapter="chapter04">
+
+                <span class="level-number">04</span>
+                <span class="level-title">US</span>
+
+            </button>
+
+
+            <!-- FINAL -->
+
+            <button class="level-node level-final"
+                    data-chapter="finalChapter">
+
+                <span class="level-number">05</span>
+                <span class="level-title">FOR MY BACHU</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEVEL 01
+    ====================================================== -->
+
+    <section id="chapter01" class="screen chapter-screen beginning-screen">
+
+        <div class="chapter-top">
+
+            <div>
+                <span class="chapter-label">LEVEL 01</span>
+                <h2>THE BEGINNING</h2>
+            </div>
+
+            <button class="map-button" data-back="mapScreen">
+                MAP
+            </button>
+
+        </div>
+
+
+        <div class="beginning-layout">
+
+            <div class="beginning-copy">
+
+                <p class="chapter-small">
+                    IT STARTED SO SIMPLY.
+                </p>
+
+                <h3>
+                    Some beginnings<br>
+                    don't feel like beginnings.
+                </h3>
+
+                <p class="beginning-intro">
+                    They just feel like two people talking...
+                    until suddenly, those conversations become
+                    something you never want to lose.
+                </p>
+
+            </div>
+
+
+            <div class="memory-envelope-area">
+
+                <div class="envelope-card" data-reveal="story1">
+
+                    <span>01</span>
+                    <strong>THAT AUGUST</strong>
+                    <small>open this memory</small>
+
+                </div>
+
+                <div class="envelope-card" data-reveal="story2">
+
+                    <span>02</span>
+                    <strong>THE LITTLE TALKS</strong>
+                    <small>open this memory</small>
+
+                </div>
+
+                <div class="envelope-card" data-reveal="story3">
+
+                    <span>03</span>
+                    <strong>THE CONFESSION</strong>
+                    <small>open this memory</small>
+
+                </div>
+
+                <div class="envelope-card" data-reveal="story4">
+
+                    <span>04</span>
+                    <strong>WHERE IT BEGAN</strong>
+                    <small>open this memory</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-reveal">
+
+            <p id="story1">
+                When we first crossed paths that August,
+                everything felt accidental, and yet, it wasn't.
+            </p>
+
+            <p id="story2">
+                What began as light teasing bloomed into late night
+                talks, quiet confessions, and a love that grew gently
+                even through the misunderstandings and jealous moments.
+            </p>
+
+            <p id="story3">
+                When I finally told him how I felt, it was like
+                holding my breath and finding safety in his yes.
+            </p>
+
+            <p id="story4">
+                That's where our story truly began.
+            </p>
+
+        </div>
+
+
+        <div class="chapter-next">
+
+            <button class="continue-button"
+                    data-next="chapter02">
+
+                CONTINUE TO LEVEL 02
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Better proposal visual -->
+
+        <div id="proposalScene" class="proposal-scene">
+
+            <div class="proposal-light"></div>
+
+            <div class="proposal-card">
+
+                <div class="flower-doodle">✦</div>
+
+                <p>one little question</p>
+
+                <h3>
+                    and somehow...
+                </h3>
+
+                <div class="proposal-line"></div>
+
+                <strong>
+                    I LOVE YOU.
+                </strong>
+
+                <small>
+                    — the beginning of A + J
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEVEL 02
+    ====================================================== -->
+
+    <section id="chapter02" class="screen chapter-screen hitman-screen">
+
+        <div class="chapter-top">
+
+            <div>
+                <span class="chapter-label">LEVEL 02</span>
+                <h2>THE HITMAN</h2>
+            </div>
+
+            <button class="map-button" data-back="mapScreen">
+                MAP
+            </button>
+
+        </div>
+
+
+        <div class="hitman-stage">
+
+            <div class="hitman-intro">
+
+                <span class="tiny-label">
+                    SOMETHING YOU MADE ME LOVE
+                </span>
+
+                <h3>
+                    I never thought<br>
+                    cricket would become<br>
+                    <em>our thing.</em>
+                </h3>
+
+            </div>
+
+
+            <div class="cricket-story">
+
+                <div class="story-card active">
+                    <span class="story-number">01</span>
+
+                    <p>
+                        Before you, cricket was just...
+                        cricket.
+                    </p>
+
+                    <small>
+                        something happening on a screen.
+                    </small>
+                </div>
+
+
+                <div class="story-card">
+                    <span class="story-number">02</span>
+
+                    <p>
+                        Then I watched you talk about
+                        Rohit Sharma with that excitement.
+                    </p>
+
+                    <small>
+                        and suddenly I wanted to understand it.
+                    </small>
+                </div>
+
+
+                <div class="story-card">
+                    <span class="story-number">03</span>
+
+                    <p>
+                        Somewhere between the matches,
+                        the conversations and your reactions...
+                    </p>
+
+                    <small>
+                        I started seeing cricket through you.
+                    </small>
+                </div>
+
+
+                <div class="story-card">
+                    <span class="story-number">04</span>
+
+                    <p>
+                        And now?
+                        <strong>
+                            I love something simply because
+                            you love it.
+                        </strong>
+                    </p>
+
+                    <small>
+                        Maybe that's one of my favourite things
+                        about us.
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="story-controls">
+
+                <button class="story-control active"
+                        data-story="0">
+                    THE START
+                </button>
+
+                <button class="story-control"
+                        data-story="1">
+                    THEN
+                </button>
+
+                <button class="story-control"
+                        data-story="2">
+                    SOMEHOW
+                </button>
+
+                <button class="story-control"
+                        data-story="3">
+                    NOW
+                </button>
+
+            </div>
+
+
+            <div class="stadium-decoration">
+
+                <div class="stadium-light light-one"></div>
+                <div class="stadium-light light-two"></div>
+
+                <div class="pitch-line"></div>
+
+                <span class="ball-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <div class="chapter-next">
+
+            <button class="continue-button"
+                    data-next="chapter03">
+
+                CONTINUE TO LEVEL 03
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+<!-- =====================================================
+     LEVEL 03 — ANIME
+====================================================== -->
+
+<section id="chapter03" class="screen chapter-screen anime-screen">
+
+    <div class="chapter-top">
+
+        <div>
+            <span class="chapter-label">LEVEL 03</span>
+            <h2>ANIME</h2>
+        </div>
+
+        <button class="map-button" data-back="mapScreen">
+            MAP
+        </button>
+
+    </div>
+
+
+    <div class="anime-layout">
+
+        <!-- YOUR PROVIDED IMAGE -->
+        <div class="anime-image-box">
+
+            <img
+                src="assets/anime-story.png" width="900" height="300"
+                alt="Our anime memory"
+            >
+
+        </div>
+
+
+        <!-- STORY -->
+        <div class="anime-story">
+
+            <span class="anime-story-label">
+                OUR LITTLE ANIME WORLD
+            </span>
+
+            <div class="anime-text">
+
+                <p class="anime-line">
+                    In his world of anime,
+                    I found colors I never knew
+                    I was missing.
+                </p>
+
+                <p class="anime-line">
+                    Every episode feels like
+                    stepping closer to him,
+                    like sitting beside him,
+                    sharing the glow of a screen
+                    that feels warmer just because
+                    he's there.
+                </p>
+
+                <p class="anime-line">
+                    What once wasn't mine,
+                    now feels like home
+                    because he loves it.
+                </p>
+
+            </div>
+
+
+            <div class="anime-dots">
+
+                <span class="anime-dot active"></span>
+                <span class="anime-dot"></span>
+                <span class="anime-dot"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="chapter-next">
+
+        <button
+            class="continue-button"
+            data-next="chapter04">
+
+            CONTINUE TO LEVEL 04
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         LEVEL 04 — US
+    ====================================================== -->
+
+    <!-- =====================================================
+     LEVEL 04 — US
+====================================================== -->
+
+<section id="chapter04" class="screen chapter-screen us-screen">
+
+    <div class="chapter-top">
+
+        <div>
+            <span class="chapter-label">LEVEL 04</span>
+            <h2>US</h2>
+        </div>
+
+        <button class="map-button" data-back="mapScreen">
+            MAP
+        </button>
+
+    </div>
+
+
+    <div class="us-stage">
+
+
+        <!-- TITLE -->
+
+        <div class="us-title">
+
+            <span>
+                FROM A LITTLE GC CHAT
+            </span>
+
+            <h3>
+                to <em>this.</em>
+            </h3>
+
+        </div>
+
+
+        <!-- =================================================
+             POLAROID 01
+        ================================================== -->
+
+        <div class="polaroid polaroid-one">
+
+            <div class="memory-photo">
+
+                <img
+                    src="assets/us1.png" height="90" width="90"
+                    alt="Our memory 1"
+                >
+
+            </div>
+
+            <small>
+                somewhere in between
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             POLAROID 02
+        ================================================== -->
+
+        <div class="polaroid polaroid-two">
+
+            <div class="memory-photo">
+
+                <img
+                    src="assets/us2.png" height="90" width="90"
+                    alt="Our memory 2"
+                >
+
+            </div>
+
+            <small>
+                you + me
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             POLAROID 03
+        ================================================== -->
+
+        <div class="polaroid polaroid-three">
+
+            <div class="memory-photo">
+
+                <img
+                    src="assets/us3.png" height="90" width="90"
+                    alt="Our memory 3"
+                >
+
+            </div>
+
+            <small>
+                always this feeling
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             POLAROID 04
+        ================================================== -->
+
+        <div class="polaroid polaroid-four">
+
+            <div class="memory-photo">
+
+                <img
+                    src="assets/us4.png" height="90" width="90"
+                    alt="Our memory 4"
+                >
+
+            </div>
+
+            <small>
+                no screens between us
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             FLOATING STORY NOTES
+        ================================================== -->
+
+        <div class="floating-note note-one">
+
+            From that first little GC chat,
+            who would have thought we'd still be here?
+
+        </div>
+
+
+        <div class="floating-note note-two">
+
+            We learned each other's silences.
+
+        </div>
+
+
+        <div class="floating-note note-three">
+
+            Sometimes love was simply:
+
+            <strong>
+                I'm here.
+            </strong>
+
+        </div>
+
+
+        <div class="floating-note note-four">
+
+            And somehow,
+            that made the distance less cruel.
+
+        </div>
+
+
+        <div class="floating-note note-five">
+
+            One ordinary day...
+            same place.
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NEXT LEVEL -->
+
+    <div class="chapter-next">
+
+        <button
+            class="continue-button"
+            data-next="finalChapter"
+        >
+
+            CONTINUE TO LEVEL 05
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         LEVEL 05 — FINAL
+    ====================================================== -->
+
+    <section id="finalChapter" class="screen chapter-screen final-chapter">
+
+        <div class="comforting-background">
+
+            <div class="soft-orb orb-one"></div>
+            <div class="soft-orb orb-two"></div>
+            <div class="soft-orb orb-three"></div>
+
+        </div>
+
+
+        <div class="final-content">
+
+            <span class="chapter-label">
+                LEVEL 05
+            </span>
+
+            <p class="final-kicker">
+                FOR MY
+            </p>
+
+            <h2>
+                BACHU
+            </h2>
+
+
+            <div class="comfort-letter">
+
+                <p class="comfort-intro">
+                    If our story were a place,
+                    I think this would be my favourite room.
+                </p>
+
+                <div class="soft-divider"></div>
+
+                <div class="poem">
+
+                    <p>
+                        Tera haath pakad ke sapne sajaati hoon,<br>
+                        Bachu mera tu, tujhme hi samaati hoon.
+                    </p>
+
+                    <p>
+                        Tere nakhre uthana mujhe bahut pasand hai,<br>
+                        Teri har zidd pe bhi dil mera khushmand hai.
+                    </p>
+
+                    <p>
+                        Bandar sa tu, par dil ka bada saaf hai,<br>
+                        Chidku bacha mera, tu hi toh meri raah hai.
+                    </p>
+
+                    <p>
+                        Teri pyaari si aawaaz jaise koi geet suhana lage,<br>
+                        Use sunte hi dil mera har dard bhulaane lage.
+                    </p>
+
+                    <p>
+                        Teri chhoti chhoti aankhein kitni masoom hain,<br>
+                        Unmein jaise mera pyaar aur mere sapnon ka sukoon hai.
+                    </p>
+
+                    <p>
+                        Tere bina ye duniya thodi adhuri si lagti hai,<br>
+                        Tu paas ho toh har dhadkan bhi meethi lagti hai.
+                    </p>
+
+                </div>
+
+
+                <div class="final-signature">
+                    <span>A + J</span>
+                    <small>always our little world</small>
+                </div>
+
+            </div>
+
+
+            <button id="forYouButton"
+                    class="main-button">
+
+                FOR YOU
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VIDEO
+    ====================================================== -->
+
+    <section id="videoChapter"
+             class="screen video-chapter">
+
+        <div class="video-wrapper">
+
+            <video id="ourVideo"
+                   playsinline
+                   preload="metadata">
+
+                <source src="assets/our-video.mp4"
+                        type="video/mp4">
+
+            </video>
+
+
+            <div id="videoPlaceholder"
+                 class="video-placeholder">
+
+                <span>OUR LITTLE VIDEO</span>
+
+                <h2>
+                    A few more moments
+                    that belong to us.
+                </h2>
+
+                <button id="continueWithoutVideo"
+                        class="main-button">
+
+                    CONTINUE
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         THANK YOU
+    ====================================================== -->
+
+    <section id="thankYouScreen"
+             class="screen thank-you-screen">
+
+        <div class="thank-you-glow"></div>
+
+        <div class="thank-you-content">
+
+            <span class="eyebrow">
+                AND FINALLY...
+            </span>
+
+            <h2>
+                Thank you.
+            </h2>
+
+
+            <div class="thank-you-text">
+
+                <p>
+                    Thank you for holding my hand even in
+                    the hardest moments.
+                </p>
+
+                <p>
+                    For not letting my mistakes define me,
+                    and for loving me even when I'm unsure
+                    of myself.
+                </p>
+
+                <p>
+                    Thank you for staying.
+                </p>
+
+                <p>
+                    For seeing me.
+                </p>
+
+                <p>
+                    And for loving me exactly as I am.
+                </p>
+
+                <p>
+                    I'll keep holding your hand too,
+                    today and always.
+                </p>
+
+            </div>
+
+
+            <div class="ending-signature">
+                A + J
+            </div>
+
+            <span class="the-end">
+                THE END
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
+
+<audio id="bgMusic" loop>
+    <source src="assets/background-music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

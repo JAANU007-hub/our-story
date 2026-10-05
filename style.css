@@ -1,0 +1,4160 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --bg: #241b25;
+    --bg-soft: #332331;
+    --wine: #63384e;
+
+    --pink: #ef9fba;
+    --pink-light: #ffd0dd;
+    --pink-glow: rgba(239, 159, 186, .45);
+
+    --cream: #fff4ed;
+    --cream-soft: #eadbd5;
+
+    --muted: #c9adb9;
+
+    --line: rgba(255, 210, 224, .35);
+
+    --shadow:
+        0 20px 70px rgba(0,0,0,.35);
+
+    --serif:
+        "Cormorant Garamond", serif;
+
+    --sans:
+        "DM Sans", sans-serif;
+
+    --script:
+        "Pacifico", cursive;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #594052 0%,
+            #342632 35%,
+            #211a23 80%
+        );
+
+    color: var(--cream);
+
+    font-family: var(--sans);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+#experience {
+
+    position: relative;
+
+    width:
+        min(
+            100vw,
+            calc(100dvh * 16 / 9),
+            1200px
+        );
+
+    height:
+        min(
+            100dvh,
+            calc(100vw * 9 / 16),
+            675px
+        );
+
+    margin: auto;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 100px rgba(239,159,186,.12);
+
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   SCREENS
+========================================================= */
+
+.screen {
+
+    position: absolute;
+    inset: 0;
+
+    display: none;
+
+    opacity: 0;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+    overflow: hidden;
+}
+
+.screen.active {
+
+    display: flex;
+
+    opacity: 1;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   ORIENTATION
+========================================================= */
+
+#orientationWarning {
+
+    display: none;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+button {
+
+    font-family: inherit;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: inherit;
+
+    background: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+.eyebrow,
+.chapter-label {
+
+    font-size: 11px;
+
+    letter-spacing: .25em;
+
+    color: var(--pink-light);
+
+    text-transform: uppercase;
+}
+
+
+.chapter-screen {
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(239,159,186,.12),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #332432,
+            #251c27
+        );
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.main-button {
+
+    padding: 15px 30px;
+
+    border: 1px solid rgba(255,200,218,.55);
+
+    border-radius: 999px;
+
+    background:
+        rgba(239,159,186,.14);
+
+    color: var(--cream);
+
+    letter-spacing: .16em;
+
+    font-size: 11px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.main-button:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        rgba(239,159,186,.28);
+
+    box-shadow:
+        0 0 30px var(--pink-glow);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-screen {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #634657,
+            #31232f 45%,
+            #211a23 85%
+        );
+}
+
+
+.intro-glow {
+
+    position: absolute;
+
+    width: 50%;
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,174,202,.24),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+}
+
+
+.intro-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.intro-content h1 {
+
+    margin: 12px 0 5px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(65px, 10vw, 120px);
+
+    font-weight: 500;
+
+    line-height: .78;
+
+    letter-spacing: .05em;
+}
+
+.intro-content h1 span {
+
+    display: block;
+
+    font-family: var(--script);
+
+    font-size: .28em;
+
+    color: var(--pink);
+
+    margin: 8px 0;
+}
+
+
+.intro-date {
+
+    margin-bottom: 35px;
+
+    color: var(--cream-soft);
+
+    letter-spacing: .3em;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-screen {
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #51384a,
+            #2b202c 55%,
+            #201920
+        );
+}
+
+
+.map-heading {
+
+    position: absolute;
+
+    top: 28px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+
+.map-heading h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(32px, 4vw, 50px);
+
+    font-weight: 500;
+
+    letter-spacing: .08em;
+
+    margin: 2px 0;
+}
+
+
+.map-heading p:last-child {
+
+    color: var(--cream-soft);
+
+    font-size: 12px;
+}
+
+
+.heart-map {
+
+    position: relative;
+
+    width: 90%;
+
+    height: 82%;
+
+    margin-top: 60px;
+}
+
+
+.heart-svg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.heart-path {
+
+    fill: none;
+
+    stroke: rgba(255,205,220,.18);
+
+    stroke-width: 3;
+}
+
+
+.heart-glow-path {
+
+    fill: none;
+
+    stroke: var(--pink);
+
+    stroke-width: 4;
+
+    stroke-dasharray: 8 15;
+
+    filter:
+        drop-shadow(0 0 10px var(--pink));
+
+    animation:
+        heartMove 5s linear infinite;
+}
+
+
+@keyframes heartMove {
+
+    to {
+        stroke-dashoffset: -100;
+    }
+}
+
+
+.level-node {
+
+    position: absolute;
+
+    width: 125px;
+
+    min-height: 80px;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,205,220,.45);
+
+    background:
+        rgba(55,35,49,.86);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.level-node:hover {
+
+    transform: translateY(-6px) scale(1.04);
+
+    background:
+        rgba(105,59,82,.9);
+
+    box-shadow:
+        0 0 30px var(--pink-glow);
+}
+
+
+.level-number {
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    color: var(--pink-light);
+}
+
+
+.level-title {
+
+    font-size: 10px;
+
+    letter-spacing: .13em;
+
+    color: var(--cream);
+
+    white-space: nowrap;
+}
+
+
+.level-1 {
+
+    left: 8%;
+
+    top: 25%;
+}
+
+
+.level-2 {
+
+    left: 28%;
+
+    top: 8%;
+}
+
+
+.level-3 {
+
+    right: 28%;
+
+    top: 8%;
+}
+
+
+.level-4 {
+
+    right: 8%;
+
+    top: 25%;
+}
+
+
+.level-final {
+
+    left: 50%;
+
+    bottom: 4%;
+
+    transform: translateX(-50%);
+}
+
+
+.level-final:hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-6px)
+        scale(1.04);
+}
+
+
+.heart-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 47%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+
+.heart-center span {
+
+    font-family: var(--script);
+
+    font-size: 35px;
+
+    color: var(--pink-light);
+
+    text-shadow:
+        0 0 20px var(--pink-glow);
+}
+
+
+/* =========================================================
+   CHAPTER TOP
+========================================================= */
+
+.chapter-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding: 24px 35px 0;
+
+    z-index: 20;
+}
+
+
+.chapter-top h2 {
+
+    font-family: var(--serif);
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    letter-spacing: .05em;
+}
+
+
+.map-button {
+
+    padding: 9px 18px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    letter-spacing: .16em;
+
+    color: var(--cream-soft);
+}
+
+
+/* =========================================================
+   LEVEL 01
+========================================================= */
+
+.beginning-layout {
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    align-items: center;
+
+    padding: 20px 55px 70px;
+}
+
+
+.beginning-copy {
+
+    padding-right: 40px;
+}
+
+
+.chapter-small {
+
+    color: var(--pink);
+
+    font-size: 10px;
+
+    letter-spacing: .2em;
+
+    margin-bottom: 15px;
+}
+
+
+.beginning-copy h3 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(34px, 4vw, 53px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+.beginning-intro {
+
+    color: var(--cream-soft);
+
+    line-height: 1.7;
+
+    max-width: 420px;
+
+    font-size: 13px;
+}
+
+
+.memory-envelope-area {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 500px;
+}
+
+
+.envelope-card {
+
+    min-height: 135px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255,205,220,.3);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(239,159,186,.14),
+            rgba(255,255,255,.04)
+        );
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.envelope-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.2),
+        0 0 25px rgba(239,159,186,.15);
+}
+
+
+.envelope-card span {
+
+    color: var(--pink);
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+
+.envelope-card strong {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    letter-spacing: .1em;
+}
+
+
+.envelope-card small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+.story-reveal {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 80px;
+
+    transform: translateX(-50%);
+
+    width: min(700px, 75%);
+
+    min-height: 55px;
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+
+.story-reveal p {
+
+    display: none;
+
+    color: var(--cream);
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+    line-height: 1.3;
+
+    animation:
+        textReveal .6s ease both;
+}
+
+
+.story-reveal p.visible {
+    display: block;
+}
+
+
+@keyframes textReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* proposal */
+
+.proposal-scene {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 50;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,159,186,.24),
+            rgba(30,20,29,.96) 70%
+        );
+}
+
+
+.proposal-scene.show {
+    display: flex;
+}
+
+
+.proposal-card {
+
+    width: 390px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #56374a,
+            #30212d
+        );
+
+    border:
+        1px solid rgba(255,205,220,.35);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        0 0 45px rgba(239,159,186,.15);
+
+    animation:
+        proposalIn .7s ease both;
+}
+
+
+.flower-doodle {
+
+    font-size: 30px;
+
+    color: var(--pink);
+}
+
+
+.proposal-card p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+
+.proposal-card h3 {
+
+    margin: 15px 0;
+
+    font-family: var(--serif);
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+
+.proposal-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    margin: 20px auto;
+}
+
+
+.proposal-card strong {
+
+    display: block;
+
+    font-family: var(--script);
+
+    color: var(--pink-light);
+
+    font-size: 28px;
+}
+
+
+.proposal-card small {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+}
+
+
+@keyframes proposalIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CONTINUE
+========================================================= */
+
+.chapter-next {
+
+    position: absolute;
+
+    right: 35px;
+
+    bottom: 25px;
+
+    z-index: 30;
+}
+
+
+.continue-button {
+
+    padding: 13px 20px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,205,220,.4);
+
+    background: rgba(239,159,186,.1);
+
+    color: var(--cream);
+
+    font-size: 10px;
+
+    letter-spacing: .15em;
+
+    transition: .3s ease;
+}
+
+
+.continue-button span {
+
+    margin-left: 8px;
+
+    color: var(--pink);
+}
+
+
+.continue-button:hover {
+
+    background: rgba(239,159,186,.25);
+
+    box-shadow:
+        0 0 25px rgba(239,159,186,.2);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LEVEL 02
+========================================================= */
+
+.hitman-screen {
+
+    background:
+        radial-gradient(
+            ellipse at 50% 30%,
+            #664353,
+            #332531 50%,
+            #211a23
+        );
+}
+
+
+.hitman-stage {
+
+    position: relative;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.hitman-intro {
+
+    position: absolute;
+
+    left: 8%;
+
+    top: 22%;
+
+    width: 280px;
+
+    z-index: 4;
+}
+
+
+.tiny-label {
+
+    font-size: 9px;
+
+    letter-spacing: .2em;
+
+    color: var(--pink);
+}
+
+
+.hitman-intro h3 {
+
+    margin-top: 15px;
+
+    font-family: var(--serif);
+
+    font-size: 39px;
+
+    line-height: .95;
+
+    font-weight: 500;
+}
+
+
+.hitman-intro em {
+
+    color: var(--pink-light);
+
+    font-style: italic;
+}
+
+
+.cricket-story {
+
+    width: 420px;
+
+    min-height: 250px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.story-card {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 38px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(56,35,49,.78);
+
+    border:
+        1px solid rgba(255,205,220,.3);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+
+    opacity: 0;
+
+    transform:
+        translateY(20px)
+        scale(.97);
+
+    pointer-events: none;
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+
+.story-card.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+.story-number {
+
+    font-family: var(--serif);
+
+    font-size: 45px;
+
+    color: var(--pink);
+}
+
+
+.story-card p {
+
+    margin-top: 15px;
+
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    line-height: 1.05;
+}
+
+
+.story-card p strong {
+
+    color: var(--pink-light);
+}
+
+
+.story-card small {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+.story-controls {
+
+    position: absolute;
+
+    bottom: 75px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 8;
+}
+
+
+.story-control {
+
+    padding: 9px 15px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,205,220,.2);
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
+
+    transition: .3s ease;
+}
+
+
+.story-control.active,
+.story-control:hover {
+
+    color: var(--cream);
+
+    background:
+        rgba(239,159,186,.18);
+
+    border-color:
+        rgba(239,159,186,.45);
+}
+
+
+/* stadium decoration */
+
+.stadium-decoration {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    opacity: .5;
+}
+
+
+.stadium-light {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,224,216,.15),
+            transparent 65%
+        );
+
+    filter: blur(10px);
+}
+
+
+.light-one {
+    left: 15%;
+    top: 10%;
+}
+
+
+.light-two {
+    right: 10%;
+    top: 5%;
+}
+
+
+.pitch-line {
+
+    position: absolute;
+
+    width: 75%;
+
+    height: 1px;
+
+    background:
+        rgba(255,235,220,.15);
+
+    bottom: 15%;
+
+    left: 12%;
+
+    transform: rotate(-4deg);
+}
+
+
+.ball-dot {
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    box-shadow:
+        0 0 20px var(--pink);
+
+    left: 72%;
+
+    bottom: 27%;
+}
+
+
+/* =========================================================
+   LEVEL 03 ANIME
+========================================================= */
+
+
+.anime-screen {
+
+    background:
+        radial-gradient(
+            circle at 30% 45%,
+            rgba(239,159,186,.18),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #352532,
+            #211a23
+        );
+
+    flex-direction: column;
+}
+
+
+/* Main layout */
+
+.anime-layout {
+
+    flex: 1;
+
+    min-height: 0;
+
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        20px 0 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(280px, .8fr);
+
+    gap: clamp(20px, 4vw, 55px);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.anime-image-box {
+
+    width: 100%;
+
+    max-height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255,210,225,.3);
+
+    background:
+        rgba(255,255,255,.04);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.3),
+
+        0 0 35px
+        rgba(239,159,186,.12);
+}
+
+
+.anime-image-box img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 47vh;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   STORY SIDE
+========================================================= */
+
+.anime-story {
+
+    min-width: 0;
+
+    padding:
+        10px 5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+.anime-story-label {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--pink);
+
+    font-size: 9px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ANIME TEXT
+========================================================= */
+
+.anime-text {
+
+    width: 100%;
+
+    min-height: 190px;
+
+    position: relative;
+}
+
+
+.anime-line {
+
+    display: none;
+
+    margin: 0;
+
+    padding-right: 5px;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(21px, 2.3vw, 31px);
+
+    line-height: 1.12;
+
+    color: var(--cream);
+
+    animation:
+        animeTextIn .65s ease both;
+}
+
+
+.anime-line.active {
+
+    display: block;
+}
+
+
+@keyframes animeTextIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.anime-dots {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+
+.anime-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.25);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.anime-dot.active {
+
+    background:
+        var(--pink);
+
+    box-shadow:
+        0 0 10px
+        var(--pink-glow);
+
+    transform:
+        scale(1.35);
+}
+
+
+/* =========================================================
+   SMALL LANDSCAPE PHONES
+========================================================= */
+
+@media
+(max-width: 900px)
+and (orientation: landscape) {
+
+    .anime-layout {
+
+        width: 94%;
+
+        gap: 25px;
+
+        padding-bottom: 58px;
+    }
+
+
+    .anime-image-box img {
+
+        max-height: 52vh;
+    }
+
+
+    .anime-line {
+
+        font-size:
+            clamp(17px, 2.7vw, 24px);
+    }
+
+
+    .anime-text {
+
+        min-height: 145px;
+    }
+}
+
+
+/* =========================================================
+   VERY SHORT PHONE SCREENS
+========================================================= */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .anime-layout {
+
+        padding-top: 8px;
+
+        padding-bottom: 48px;
+
+        gap: 20px;
+    }
+
+
+    .anime-image-box img {
+
+        max-height: 55vh;
+    }
+
+
+    .anime-story-label {
+
+        margin-bottom: 9px;
+    }
+
+
+    .anime-text {
+
+        min-height: 120px;
+    }
+
+
+    .anime-line {
+
+        font-size: 17px;
+
+        line-height: 1.08;
+    }
+
+
+    .anime-dots {
+
+        margin-top: 12px;
+    }
+}
+
+/* =========================================================
+   LEVEL 04
+========================================================= */
+
+.us-screen {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #624151,
+            #30222d 70%
+        );
+}
+
+
+.us-stage {
+
+    position: relative;
+
+    flex: 1;
+}
+
+
+.us-title {
+
+    position: absolute;
+
+    left: 7%;
+
+    top: 20%;
+
+    z-index: 5;
+}
+
+
+.us-title span {
+
+    font-size: 9px;
+
+    letter-spacing: .18em;
+
+    color: var(--pink);
+}
+
+
+.us-title h3 {
+
+    font-family: var(--serif);
+
+    font-size: 43px;
+
+    font-weight: 500;
+}
+
+
+.us-title em {
+
+    color: var(--pink-light);
+}
+
+
+/* polaroids */
+
+.polaroid {
+
+    position: absolute;
+
+    width: 145px;
+
+    padding: 8px 8px 18px;
+
+    background:
+        #f9eee8;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+    color: #47343d;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.polaroid:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(0deg) !important;
+
+    z-index: 10;
+}
+
+
+.memory-photo {
+
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d99fb2,
+            #785268
+        );
+
+    color: rgba(255,255,255,.8);
+
+    font-family: var(--serif);
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+.polaroid small {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 8px;
+
+    font-family: var(--script);
+
+    font-size: 11px;
+}
+
+
+.polaroid-one {
+
+    left: 38%;
+
+    top: 10%;
+
+    transform: rotate(-7deg);
+}
+
+
+.polaroid-two {
+
+    left: 55%;
+
+    top: 17%;
+
+    transform: rotate(6deg);
+}
+
+
+.polaroid-three {
+
+    left: 41%;
+
+    top: 52%;
+
+    transform: rotate(5deg);
+}
+
+
+.polaroid-four {
+
+    left: 59%;
+
+    top: 57%;
+
+    transform: rotate(-6deg);
+}
+
+
+/* notes */
+
+.floating-note {
+
+    position: absolute;
+
+    width: 190px;
+
+    padding: 14px 16px;
+
+    background:
+        rgba(255,242,236,.94);
+
+    color: #49343e;
+
+    font-family: var(--serif);
+
+    font-size: 15px;
+
+    line-height: 1.15;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.15);
+
+    opacity: 0;
+
+    transform:
+        translateY(20px)
+        rotate(-2deg);
+
+    animation:
+        notePop .7s ease forwards;
+}
+
+
+.note-one {
+    left: 20%;
+    top: 12%;
+}
+
+
+.note-two {
+    right: 6%;
+    top: 12%;
+
+    animation-delay: .2s;
+
+    transform: rotate(4deg);
+}
+
+
+.note-three {
+    left: 18%;
+    bottom: 17%;
+
+    animation-delay: .4s;
+
+    transform: rotate(3deg);
+}
+
+
+.note-four {
+    right: 8%;
+    bottom: 20%;
+
+    animation-delay: .6s;
+
+    transform: rotate(-4deg);
+}
+
+
+.note-five {
+
+    left: 50%;
+
+    bottom: 5%;
+
+    transform: translateX(-50%) rotate(1deg);
+
+    animation-delay: .8s;
+
+    width: 210px;
+
+    text-align: center;
+}
+
+
+.floating-note strong {
+
+    color: #a65375;
+
+    font-family: var(--script);
+
+    font-weight: 400;
+}
+
+
+@keyframes notePop {
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+    }
+}
+
+
+.us-final-line {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 3%;
+
+    transform: translateX(-50%);
+
+    width: 400px;
+
+    text-align: center;
+
+    font-family: var(--serif);
+
+    font-size: 18px;
+
+    color: var(--cream);
+
+    opacity: .9;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-chapter {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #624353,
+            #352530 55%,
+            #211a23
+        );
+}
+
+
+.comforting-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+.soft-orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(35px);
+
+    background:
+        rgba(239,159,186,.13);
+}
+
+
+.orb-one {
+
+    width: 300px;
+
+    height: 300px;
+
+    top: -100px;
+
+    left: -50px;
+}
+
+
+.orb-two {
+
+    width: 250px;
+
+    height: 250px;
+
+    right: -70px;
+
+    bottom: -70px;
+}
+
+
+.orb-three {
+
+    width: 180px;
+
+    height: 180px;
+
+    left: 50%;
+
+    top: 40%;
+
+    transform: translate(-50%,-50%);
+
+    background:
+        rgba(255,218,205,.08);
+}
+
+
+.final-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 75%;
+
+    max-height: 90%;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+}
+
+
+.final-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+.final-kicker {
+
+    margin-top: 8px;
+
+    color: var(--pink);
+
+    letter-spacing: .3em;
+
+    font-size: 11px;
+}
+
+
+.final-content > h2 {
+
+    margin: 0 0 15px;
+
+    font-family: var(--script);
+
+    font-size: 50px;
+
+    font-weight: 400;
+
+    color: var(--pink-light);
+
+    text-shadow:
+        0 0 25px rgba(239,159,186,.25);
+}
+
+
+.comfort-letter {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    padding: 25px 35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,239,235,.07);
+
+    border:
+        1px solid rgba(255,215,225,.18);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.18);
+}
+
+
+.comfort-intro {
+
+    font-family: var(--serif);
+
+    font-size: 20px;
+
+    color: var(--cream-soft);
+}
+
+
+.soft-divider {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    margin: 17px auto;
+}
+
+
+.poem p {
+
+    margin: 9px 0;
+
+    font-family: var(--serif);
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    color: var(--cream);
+}
+
+
+.final-signature {
+
+    margin-top: 15px;
+}
+
+
+.final-signature span {
+
+    display: block;
+
+    font-family: var(--script);
+
+    font-size: 28px;
+
+    color: var(--pink-light);
+}
+
+
+.final-signature small {
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    letter-spacing: .1em;
+}
+
+
+#forYouButton {
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-chapter {
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #181419;
+}
+
+
+.video-wrapper {
+
+    position: relative;
+
+    width: 90%;
+
+    height: 90%;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.5);
+}
+
+
+#ourVideo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #111;
+}
+
+
+.video-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #684656,
+            #2b202a
+        );
+}
+
+
+.video-placeholder > span {
+
+    color: var(--pink);
+
+    letter-spacing: .25em;
+
+    font-size: 10px;
+}
+
+
+.video-placeholder h2 {
+
+    margin: 15px 0 25px;
+
+    font-family: var(--serif);
+
+    font-size: 40px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   THANK YOU
+========================================================= */
+
+.thank-you-screen {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #684656,
+            #291e28
+        );
+}
+
+
+.thank-you-glow {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,159,186,.18),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+}
+
+
+.thank-you-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 70%;
+}
+
+
+.thank-you-content h2 {
+
+    margin: 10px 0 20px;
+
+    font-family: var(--script);
+
+    font-size: 60px;
+
+    color: var(--pink-light);
+}
+
+
+.thank-you-text p {
+
+    margin: 7px auto;
+
+    font-family: var(--serif);
+
+    font-size: 19px;
+
+    color: var(--cream-soft);
+}
+
+
+.ending-signature {
+
+    margin-top: 25px;
+
+    font-family: var(--script);
+
+    font-size: 32px;
+
+    color: var(--pink);
+}
+
+
+.the-end {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: .3em;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    #experience {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .chapter-top {
+        padding: 14px 22px 0;
+    }
+
+    .chapter-top h2 {
+        font-size: 25px;
+    }
+
+    .level-node {
+        width: 105px;
+        min-height: 65px;
+    }
+
+    .level-number {
+        font-size: 20px;
+    }
+
+    .level-title {
+        font-size: 8px;
+    }
+
+    .beginning-layout {
+        padding:
+            10px 25px 55px;
+    }
+
+    .beginning-copy h3 {
+        font-size: 30px;
+    }
+
+    .memory-envelope-area {
+        gap: 8px;
+    }
+
+    .envelope-card {
+        min-height: 100px;
+        padding: 13px;
+    }
+
+    .envelope-card strong {
+        font-size: 9px;
+    }
+
+    .story-reveal {
+        bottom: 62px;
+    }
+
+    .story-reveal p {
+        font-size: 17px;
+    }
+
+    .hitman-intro {
+        left: 4%;
+    }
+
+    .hitman-intro h3 {
+        font-size: 29px;
+    }
+
+    .cricket-story {
+        width: 350px;
+        min-height: 190px;
+    }
+
+    .story-card {
+        padding: 25px;
+    }
+
+    .story-card p {
+        font-size: 20px;
+    }
+
+    .manga-stage {
+        padding-bottom: 50px;
+    }
+
+    .floating-note {
+        width: 140px;
+        font-size: 11px;
+    }
+
+    .polaroid {
+        width: 110px;
+    }
+
+    .memory-photo {
+        height: 85px;
+    }
+
+    .comfort-letter {
+        padding: 15px 25px;
+    }
+
+    .poem p {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .final-content > h2 {
+        font-size: 38px;
+    }
+
+    .thank-you-content h2 {
+        font-size: 42px;
+    }
+
+    .thank-you-text p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
+@media (orientation: portrait) {
+
+    #experience {
+
+    position: relative;
+
+    width: 100dvw;
+
+    height: 100dvh;
+
+    max-width: none;
+
+    max-height: none;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: var(--bg);
+
+    box-shadow: none;
+}
+
+    #orientationWarning .rotate-icon {
+
+        font-size: 50px;
+
+        color: var(--pink);
+
+        animation:
+            rotatePhone 1.5s ease-in-out infinite;
+    }
+
+    #orientationWarning h2 {
+
+        font-family: var(--serif);
+
+        font-size: 30px;
+    }
+
+    #orientationWarning p {
+
+        color: var(--muted);
+
+        font-size: 12px;
+    }
+}
+
+
+@keyframes rotatePhone {
+
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+    }
+}
+
+/* =========================================================
+   PHONE-SAFE CHAPTER SYSTEM
+========================================================= */
+
+.chapter-screen {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-width: 0;
+
+    min-height: 0;
+}
+
+
+.chapter-top {
+
+    flex-shrink: 0;
+
+    min-height: 65px;
+
+    padding:
+        16px
+        clamp(18px, 4vw, 40px)
+        0;
+}
+
+
+.chapter-top > div {
+
+    min-width: 0;
+}
+
+
+.chapter-top h2 {
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* Never allow bottom button
+   to collide with content */
+
+.chapter-next {
+
+    position: absolute;
+
+    right:
+        clamp(16px, 3vw, 35px);
+
+    bottom:
+        clamp(12px, 3vh, 25px);
+
+    z-index: 50;
+}
+
+
+/* Better phone button */
+
+.continue-button {
+
+    white-space: nowrap;
+
+    max-width: 90vw;
+}
+
+
+/* =========================================================
+   MOTOROLA LANDSCAPE
+========================================================= */
+
+@media
+(max-width: 950px)
+and (orientation: landscape) {
+
+    .chapter-top {
+
+        min-height: 58px;
+
+        padding:
+            10px 20px 0;
+    }
+
+
+    .chapter-top h2 {
+
+        font-size: 25px;
+    }
+
+
+    .chapter-label {
+
+        font-size: 8px;
+    }
+
+
+    .map-button {
+
+        padding:
+            7px 14px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   VERY SHORT LANDSCAPE
+========================================================= */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .chapter-top {
+
+        min-height: 52px;
+
+        padding:
+            8px 16px 0;
+    }
+
+
+    .chapter-top h2 {
+
+        font-size: 22px;
+    }
+
+
+    .chapter-label {
+
+        font-size: 7px;
+    }
+
+
+    .continue-button {
+
+        padding:
+            9px 14px;
+
+        font-size: 8px;
+    }
+}
+
+/* =========================================================
+   FINAL ALIGNMENT FIX
+   Prevent story text from floating over other elements
+========================================================= */
+
+.story-grid,
+.memory-grid,
+.rohit-grid,
+.note-grid {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------- LEVEL 01 ---------- */
+
+.story-envelope {
+    position: relative !important;
+    overflow: hidden;
+}
+
+.story-envelope .story-content,
+.story-envelope .story-text,
+.story-envelope .reveal-text,
+.story-envelope [data-story] {
+    position: static !important;
+    transform: none !important;
+}
+
+
+/* Hidden story text stays INSIDE its card */
+
+.story-piece {
+    position: static !important;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity .45s ease,
+        max-height .45s ease,
+        transform .45s ease;
+}
+
+
+/* Opened story */
+
+.story-piece.show,
+.story-piece.revealed,
+.story-piece.active {
+    opacity: 1;
+
+    max-height: 180px;
+
+    transform: translateY(0);
+}
+
+
+/* Don't let story text become a free-floating
+   element at the bottom of the screen */
+
+.story-reveal,
+.revealed-story,
+.story-output {
+    position: static !important;
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    transform: none !important;
+
+    margin: 0 !important;
+}
+
+
+/* ---------- LEVEL 02 ---------- */
+
+.hitman-content,
+.hitman-story,
+.hitman-card {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+.hitman-story p,
+.hitman-card p {
+    position: static !important;
+
+    transform: none !important;
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+}
+
+
+/* Buttons stay BELOW the text */
+
+.hitman-buttons {
+    position: static !important;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* ---------- LEVEL 04 ---------- */
+
+.us-screen .story-text,
+.us-screen .memory-text,
+.us-screen .note-text {
+    position: static !important;
+
+    transform: none !important;
+}
+
+
+/* Bottom continue button NEVER overlaps text */
+
+.chapter-next {
+    position: absolute !important;
+
+    right: clamp(15px, 3vw, 35px);
+
+    bottom: clamp(12px, 3vh, 25px);
+
+    z-index: 100;
+}
+
+
+/* Every chapter's main content must leave
+   room for the bottom button */
+
+.chapter-screen {
+    box-sizing: border-box;
+
+    padding-bottom: 75px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media
+(max-width: 950px)
+and (orientation: landscape) {
+
+    .chapter-screen {
+        padding-bottom: 62px;
+    }
+
+    .story-piece {
+        font-size: 12px;
+
+        line-height: 1.35;
+    }
+
+    .hitman-buttons {
+        margin-top: 12px;
+    }
+}
+
+
+/* VERY SHORT MOTOROLA LANDSCAPE */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .chapter-screen {
+        padding-bottom: 55px;
+    }
+
+    .story-piece {
+        font-size: 11px;
+    }
+
+    .chapter-next {
+        bottom: 8px;
+    }
+}
+
+/* =========================================================
+   LEVEL 02 — THE HITMAN
+   CLEAN CINEMATIC LAYOUT
+========================================================= */
+
+.hitman-screen {
+
+    background:
+        radial-gradient(
+            circle at 70% 35%,
+            rgba(239,159,186,.13),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 25% 70%,
+            rgba(130,70,100,.14),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #241b25,
+            #352430
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.hitman-stage {
+
+    position: relative;
+
+    width: min(1050px, 92%);
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(230px, .72fr)
+        minmax(400px, 1.28fr);
+
+    grid-template-rows:
+        1fr
+        auto;
+
+    column-gap:
+        clamp(30px, 5vw, 75px);
+
+    align-items: center;
+
+    padding:
+        10px 0 65px;
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.hitman-intro {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+.hitman-intro .tiny-label {
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: var(--pink);
+
+    font-size: 9px;
+
+    letter-spacing: .2em;
+}
+
+
+.hitman-intro h3 {
+
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(29px, 3.5vw, 47px);
+
+    line-height: 1.02;
+
+    font-weight: 400;
+
+    color: var(--cream);
+}
+
+
+.hitman-intro h3 em {
+
+    color: var(--pink);
+
+    font-style: italic;
+}
+
+
+.hitman-intro p {
+
+    max-width: 330px;
+
+    margin-top: 20px;
+
+    color:
+        rgba(255,235,242,.65);
+
+    font-size:
+        clamp(11px, 1.15vw, 14px);
+
+    line-height: 1.6;
+}
+
+
+.hitman-intro p span {
+
+    color: var(--pink);
+
+    font-family: var(--serif);
+
+    font-style: italic;
+
+    font-size: 1.15em;
+}
+
+
+/* =========================================================
+   STORY CARD
+========================================================= */
+
+.cricket-story {
+
+    position: relative;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height:
+        clamp(220px, 30vh, 310px);
+}
+
+
+.story-card {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding:
+        clamp(24px, 3vw, 38px);
+
+    border:
+        1px solid
+        rgba(239,159,186,.25);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,210,225,.10),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.05),
+
+        0 25px 55px
+        rgba(0,0,0,.2);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(14px)
+        scale(.985);
+
+    transition:
+        opacity .55s ease,
+        transform .55s ease,
+        visibility .55s ease;
+
+    overflow: hidden;
+}
+
+
+.story-card.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* little glowing corner */
+
+.story-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -50px;
+
+    bottom: -60px;
+
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(239,159,186,.14),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.story-card-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.story-number {
+
+    color: var(--pink);
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(30px, 3vw, 43px);
+
+    line-height: 1;
+}
+
+
+.story-mini {
+
+    color:
+        rgba(255,220,231,.55);
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   STORY TEXT
+========================================================= */
+
+.story-main {
+
+    max-width: 570px;
+}
+
+
+.story-main p {
+
+    margin: 0;
+
+    color: var(--cream);
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(22px, 2.35vw, 32px);
+
+    line-height: 1.17;
+}
+
+
+.story-main p em {
+
+    color: var(--pink);
+
+    font-style: italic;
+}
+
+
+.story-main > span {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color:
+        rgba(255,231,239,.58);
+
+    font-size:
+        clamp(11px, 1.15vw, 15px);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.story-controls {
+
+    grid-column: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-top: 14px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.story-control {
+
+    border:
+        1px solid
+        rgba(239,159,186,.24);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:
+        rgba(255,225,235,.55);
+
+    padding:
+        9px 14px;
+
+    font-family: var(--sans);
+
+    font-size: 8px;
+
+    letter-spacing: .1em;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+}
+
+
+.story-control:hover {
+
+    color: var(--cream);
+
+    border-color:
+        rgba(239,159,186,.6);
+}
+
+
+.story-control.active {
+
+    color: var(--cream);
+
+    background:
+        rgba(239,159,186,.12);
+
+    border-color:
+        rgba(239,159,186,.65);
+
+    box-shadow:
+        0 0 18px
+        rgba(239,159,186,.08);
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.stadium-decoration {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.pitch-line {
+
+    position: absolute;
+
+    width: 70%;
+
+    height: 1px;
+
+    right: 2%;
+
+    bottom: 16%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(239,159,186,.22),
+            transparent
+        );
+
+    transform: rotate(-4deg);
+}
+
+
+.ball-dot {
+
+    position: absolute;
+
+    right: 14%;
+
+    top: 52%;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    box-shadow:
+        0 0 16px
+        var(--pink-glow);
+
+    animation:
+        ballFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes ballFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+.stadium-light {
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,190,215,.07),
+            transparent 68%
+        );
+
+    filter: blur(3px);
+}
+
+
+.light-one {
+
+    top: 5%;
+
+    right: 4%;
+}
+
+
+.light-two {
+
+    bottom: 5%;
+
+    left: 30%;
+}
+
+
+/* =========================================================
+   MOTOROLA LANDSCAPE
+========================================================= */
+
+@media
+(max-width: 950px)
+and (orientation: landscape) {
+
+    .hitman-stage {
+
+        width: 94%;
+
+        grid-template-columns:
+            minmax(190px, .65fr)
+            minmax(370px, 1.35fr);
+
+        column-gap: 25px;
+
+        padding-bottom: 52px;
+    }
+
+
+    .hitman-intro .tiny-label {
+
+        font-size: 7px;
+
+        margin-bottom: 9px;
+    }
+
+
+    .hitman-intro h3 {
+
+        font-size: 25px;
+    }
+
+
+    .hitman-intro p {
+
+        font-size: 9px;
+
+        margin-top: 12px;
+    }
+
+
+    .cricket-story {
+
+        min-height: 180px;
+    }
+
+
+    .story-card {
+
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .story-card-heading {
+
+        margin-bottom: 18px;
+    }
+
+
+    .story-number {
+
+        font-size: 25px;
+    }
+
+
+    .story-mini {
+
+        font-size: 7px;
+    }
+
+
+    .story-main p {
+
+        font-size: 19px;
+    }
+
+
+    .story-main > span {
+
+        margin-top: 10px;
+
+        font-size: 9px;
+    }
+
+
+    .story-controls {
+
+        gap: 5px;
+
+        margin-top: 9px;
+    }
+
+
+    .story-control {
+
+        padding: 7px 10px;
+
+        font-size: 6px;
+    }
+}
+
+
+/* =========================================================
+   VERY SHORT LANDSCAPE
+========================================================= */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .hitman-stage {
+
+        padding-bottom: 42px;
+
+        column-gap: 20px;
+    }
+
+
+    .hitman-intro h3 {
+
+        font-size: 22px;
+    }
+
+
+    .hitman-intro p {
+
+        font-size: 8px;
+
+        line-height: 1.35;
+    }
+
+
+    .cricket-story {
+
+        min-height: 155px;
+    }
+
+
+    .story-card {
+
+        padding: 15px;
+    }
+
+
+    .story-card-heading {
+
+        margin-bottom: 12px;
+    }
+
+
+    .story-main p {
+
+        font-size: 16px;
+    }
+
+
+    .story-main > span {
+
+        font-size: 8px;
+
+        margin-top: 7px;
+    }
+
+
+    .story-control {
+
+        padding: 6px 8px;
+
+        font-size: 5.5px;
+    }
+}
+
+/* =========================================================
+   LEVEL 02 — DEFINITIVE LAYOUT FIX
+========================================================= */
+
+.hitman-stage {
+    position: relative !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(230px, 0.72fr)
+        minmax(430px, 1.28fr) !important;
+
+    grid-template-rows:
+        auto auto !important;
+
+    column-gap:
+        clamp(35px, 5vw, 75px) !important;
+
+    row-gap: 14px !important;
+
+    align-items: center !important;
+    align-content: center !important;
+
+    width: min(1050px, 92%) !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        10px 0 65px !important;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.hitman-stage .hitman-intro {
+    position: relative !important;
+
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    align-self: center !important;
+
+    transform: none !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =========================================================
+   STORY CARD AREA
+========================================================= */
+
+.hitman-stage .cricket-story {
+    position: relative !important;
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    width: 100% !important;
+
+    height: 250px !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =========================================================
+   STORY CARDS
+========================================================= */
+
+.hitman-stage .story-card {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   CONTROLS
+   THIS IS THE IMPORTANT FIX
+========================================================= */
+
+.hitman-stage .story-controls {
+    position: static !important;
+
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 8px !important;
+
+    transform: none !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    z-index: 20 !important;
+}
+
+
+/* =========================================================
+   CONTROL BUTTONS
+========================================================= */
+
+.hitman-stage .story-control {
+    position: static !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   DECORATIONS MUST STAY BEHIND
+========================================================= */
+
+.hitman-stage .stadium-decoration {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   MOTOROLA LANDSCAPE
+========================================================= */
+
+@media
+(max-width: 950px)
+and (orientation: landscape) {
+
+    .hitman-stage {
+
+        width: 94% !important;
+
+        grid-template-columns:
+            minmax(190px, .68fr)
+            minmax(360px, 1.32fr) !important;
+
+        column-gap: 25px !important;
+
+        row-gap: 8px !important;
+
+        padding-bottom: 50px !important;
+    }
+
+
+    .hitman-stage .cricket-story {
+
+        height: 175px !important;
+    }
+
+
+    .hitman-stage .story-controls {
+
+        gap: 5px !important;
+    }
+
+
+    .hitman-stage .story-control {
+
+        padding: 7px 10px !important;
+
+        font-size: 6px !important;
+    }
+}
+
+
+/* =========================================================
+   SHORT MOTOROLA LANDSCAPE
+========================================================= */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .hitman-stage {
+
+        grid-template-columns:
+            minmax(175px, .65fr)
+            minmax(340px, 1.35fr) !important;
+
+        column-gap: 18px !important;
+
+        row-gap: 6px !important;
+
+        padding-bottom: 42px !important;
+    }
+
+
+    .hitman-stage .cricket-story {
+
+        height: 150px !important;
+    }
+
+
+    .hitman-stage .story-control {
+
+        padding: 6px 8px !important;
+
+        font-size: 5.5px !important;
+    }
+}
+
+/* =========================================================
+   LEVEL 05 — BIGGER CARD + BIGGER POEM
+========================================================= */
+
+.final-room {
+    padding-bottom: 20px !important;
+}
+
+
+/* CARD — almost full screen height */
+
+.final-memory {
+    width: min(900px, 90%) !important;
+
+    height: calc(100% - 145px) !important;
+
+    flex: none !important;
+
+    margin:
+        18px auto
+        10px !important;
+
+    padding:
+        22px 45px 28px !important;
+
+    overflow-y: auto !important;
+}
+
+
+/* INTRO TEXT */
+
+.final-intro {
+    font-size:
+        clamp(18px, 2vw, 25px) !important;
+
+    line-height: 1.35 !important;
+
+    margin-bottom: 16px !important;
+}
+
+
+/* DIVIDER */
+
+.final-divider {
+    width: 85px !important;
+
+    margin:
+        0 auto
+        20px !important;
+}
+
+
+/* POEM */
+
+.final-poem {
+    max-width: 800px !important;
+}
+
+
+.final-poem p {
+    font-size:
+        clamp(14px, 1.45vw, 18px) !important;
+
+    line-height: 1.55 !important;
+
+    margin-bottom: 17px !important;
+}
+
+
+/* SIGNATURE */
+
+.final-signature {
+    font-size:
+        clamp(25px, 3vw, 36px) !important;
+
+    margin-top: 12px !important;
+}
+
+
+/* =========================================================
+   MOTOROLA LANDSCAPE
+========================================================= */
+
+@media
+(max-width: 950px)
+and (orientation: landscape) {
+
+    .final-room {
+        padding:
+            10px 15px 15px !important;
+    }
+
+    .final-heading h2 {
+        font-size: 42px !important;
+    }
+
+    .final-memory {
+        width: 92% !important;
+
+        height: calc(100% - 105px) !important;
+
+        margin:
+            8px auto
+            5px !important;
+
+        padding:
+            15px 30px 20px !important;
+    }
+
+    .final-intro {
+        font-size: 15px !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    .final-divider {
+        margin-bottom: 12px !important;
+    }
+
+    .final-poem p {
+        font-size: 11px !important;
+
+        line-height: 1.4 !important;
+
+        margin-bottom: 9px !important;
+    }
+
+    .final-signature {
+        font-size: 24px !important;
+    }
+}
+
+
+/* =========================================================
+   SHORT MOTOROLA SCREEN
+========================================================= */
+
+@media
+(max-height: 430px)
+and (orientation: landscape) {
+
+    .final-memory {
+        height: calc(100% - 90px) !important;
+
+        padding:
+            12px 25px 15px !important;
+    }
+
+    .final-heading h2 {
+        font-size: 34px !important;
+    }
+
+    .final-intro {
+        font-size: 12px !important;
+    }
+
+    .final-poem p {
+        font-size: 9px !important;
+
+        line-height: 1.3 !important;
+
+        margin-bottom: 6px !important;
+    }
+}
+
+/* =========================
+   BMW BIRTHDAY INTRO
+========================= */
+
+.bmw-intro-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1F2A44;
+    z-index: 9999;
+}
+
+.bmw-intro-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bmw-intro-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 42, 68, 0.18);
+    pointer-events: none;
+}
+
+.bmw-skip-button {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    z-index: 10;
+
+    padding: 10px 18px;
+    border: 1px solid #E8DCC8;
+    border-radius: 30px;
+
+    background: rgba(31, 42, 68, 0.55);
+    color: #E8DCC8;
+
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bmw-skip-button:hover {
+    background: #C6A75E;
+    color: #1F2A44;
+}
