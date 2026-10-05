@@ -706,3 +706,11 @@ console.log(
     "%cA + J — Our Story",
     "color:#ef9fba;font-size:20px;font-weight:bold;"
 );
+    
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch(error => console.log("Service Worker error:", error));
+    });
+}

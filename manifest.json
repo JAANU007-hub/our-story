@@ -1,0 +1,10 @@
+{
+  "name": "Our Story",
+  "short_name": "Our Story",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#1F2A44",
+  "theme_color": "#1F2A44",
+  "icons": []
+}
