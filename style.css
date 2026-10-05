@@ -2415,7 +2415,7 @@ and (orientation: landscape) {
 
     #experience {
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
     }
 
     .chapter-top {
@@ -4157,4 +4157,46 @@ and (orientation: landscape) {
 .bmw-skip-button:hover {
     background: #C6A75E;
     color: #1F2A44;
+}
+
+/* =========================
+   MOBILE BROWSER ADDRESS BAR FIX
+========================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100dvh;
+    height: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .screen {
+        min-height: 100dvh;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .chapter-screen {
+        min-height: 100dvh;
+        height: auto;
+    }
+
+    .chapter-next {
+        padding-bottom: 30px;
+    }
 }
